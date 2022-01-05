@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ufjf-dcc195/ufjf-dcc195-2021-3ere-atv4-edsonlsjunior/issues"
   },
-  "homepage": "https://github.com/ufjf-dcc195/ufjf-dcc195-2021-3ere-atv4-edsonlsjunior#readme"
+  "homepage": "https://github.com/ufjf-dcc195/ufjf-dcc195-2021-3ere-atv4-edsonlsjunior#readme",
+  "dependencies": {
+    "connect": "^3.7.0"
+  }
 }
