@@ -1,9 +1,10 @@
 const connect = require("connect");
 const morgan = require("morgan");
 const serveStatic = require("serve-static");
+const PORT = process.env.PORT ?? 3000;
 
 const app = connect();
-app.listen(3000);
+app.listen(PORT);
 app.use(logger);
 app.use(morgan("short"));
 app.use(serveStatic("./public"));
@@ -14,7 +15,7 @@ app.use("/sobre.html", sobre);
 app.use("/techs.html", techs);
 
 
-console.log("Servidor escutando em http://localhost:3000");
+console.log(`Servidor escutando em http://localhost:${PORT}`);
 
 function techs(req, res, next){
     res.setHeader("Content-Type", "text/html;charset=utf-8");
