@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ufjf-dcc195/ufjf-dcc195-2021-3ere-atv4-edsonlsjunior#readme",
   "dependencies": {
-    "connect": "^3.7.0"
+    "connect": "^3.7.0",
+    "morgan": "^1.10.0"
   }
 }

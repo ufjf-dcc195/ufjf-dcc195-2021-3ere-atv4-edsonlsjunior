@@ -1,7 +1,10 @@
 const connect = require("connect");
+const morgan = require("morgan");
+
 const app = connect();
 app.listen(3000);
 app.use(logger);
+app.use(morgan("short"));
 app.use("/hello.html", helloWorld);
 app.use("/bye.html", byeWorld);
 
