@@ -10,9 +10,21 @@ app.use(serveStatic("./public"));
 app.use("/hello.html", helloWorld);
 app.use("/bye.html", byeWorld);
 app.use("/index.html", index);
+app.use("/sobre.html", sobre);
 
 
 console.log("Servidor escutando em http://localhost:3000");
+
+function sobre(req, res, next){
+    res.setHeader("Content-Type", "text/html;charset=utf-8");
+    res.write("<link rel=stylesheet href=estilo.css />");
+    res.end(`
+    <img src="./foto-perfil.jfif">
+    <p>Nome: Edson Lopes da Silva Junior</p>
+    <p>Curso: Ciência da Computação</p>
+    <p>Email: edsonjunior@ice.ufjf.br</p>         
+    `);
+}
 
 function index(req, res, next){
     res.setHeader("Content-Type", "text/html;charset=utf-8");
