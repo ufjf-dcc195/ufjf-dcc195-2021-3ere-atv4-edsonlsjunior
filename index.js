@@ -11,9 +11,23 @@ app.use("/hello.html", helloWorld);
 app.use("/bye.html", byeWorld);
 app.use("/index.html", index);
 app.use("/sobre.html", sobre);
+app.use("/techs.html", techs);
 
 
 console.log("Servidor escutando em http://localhost:3000");
+
+function techs(req, res, next){
+    res.setHeader("Content-Type", "text/html;charset=utf-8");
+    res.write("<link rel=stylesheet href=estilo.css />");
+    var techs = ["C", "C++", "Java", "Python", "PHP", "C#", "shellscript"];
+    techs.sort();
+
+    res.write("<ul>");
+    for(i in techs){
+        res.write(`<li>${techs[i]}</li>`);
+    }
+    res.end("</ul>");
+}
 
 function sobre(req, res, next){
     res.setHeader("Content-Type", "text/html;charset=utf-8");
